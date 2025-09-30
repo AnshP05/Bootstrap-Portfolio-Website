@@ -1,0 +1,38 @@
+
+@use '../custom' as *;
+@use '../components/mixins' as *;
+.menu {
+    @include gradient;
+
+    li {
+        padding: 0 0.7rem;
+        a {
+            color: $white !important;
+            text-transform: capitalize;
+            font-weight: 600;
+            //font-size: 1.1rem;
+            &:hover {
+                color: $gray-200 !important;
+            }
+        }
+    }
+}
+
+.navbar {
+    .navbar-brand {
+      img {
+        height: 50px;   // keeps the navbar slim
+        width: auto;    // maintains aspect ratio
+      }
+    } 
+    /* Responsive override
+    @media (max-width: 576px) {
+      .navbar-brand {
+        img {
+          height: 30px;
+        }
+      }
+    }
+      */
+}
+  
